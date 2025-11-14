@@ -84,7 +84,7 @@ function showResult() {
     resultDesc.innerText = resultDescriptions[most];
 
     //Change the image according to the result
-    const BASE = "student_quiz_mobile/public/images/";
+    const BASE = "student_quiz_mobile/public/";
 
     if (most === 'a') resultImg.src = BASE + "resultA";
     else if (most === 'b') resultImg.src = BASE + "resultB";
