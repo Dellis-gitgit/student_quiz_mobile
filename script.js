@@ -86,10 +86,10 @@ function showResult() {
     //Change the image according to the result
     const BASE = "student_quiz_mobile/public/images/";
 
-    if (most === 'a') resultImg.src = BASE + "resultA.jpg";
-    else if (most === 'b') resultImg.src = BASE + "resultB.jpg";
-    else if (most === 'c') resultImg.src = BASE + "resultC.jpg";
-    else if (most === 'd') resultImg.src = BASE + "resultD.jpg";
+    if (most === 'a') resultImg.src = BASE + "resultA";
+    else if (most === 'b') resultImg.src = BASE + "resultB";
+    else if (most === 'c') resultImg.src = BASE + "resultC";
+    else if (most === 'd') resultImg.src = BASE + "resultD";
 
     quizDiv.style.display = "none";
     resultDiv.style.display = "block";
