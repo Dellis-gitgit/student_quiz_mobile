@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Welcoming 2025-2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#9c27b0">
+    <script>
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+        });
+    }
+</script>
+</head>
+<body>
+    <!-- Canvas for background animation-->
+    <canvas id="lavaCanvas"></canvas>
+
+    <!-- App content-->
+
+    <div id="app">
+        <div id="home">
+            <h1>Student Welcoming 2025-2026 by Young Minds NKUA</h1>
+            <p>Κάνε αυτό το Quiz και δες τι τύπος φοιτητή είσαι</p>
+            <button id="startBtn">Έναρξη</button>
+        </div>
+
+        <div id="quiz" style="display:none;">
+            <h2 id="questionText"></h2>
+            <div id="options"></div>
+        </div>
+
+        <div id="result" style="display:none;">
+            <h2>Το αποτέλεσμα σου:</h2>
+            <p id="resultType"></p>
+            <p id="resultDesc"></p>
+
+            <!-- Always visible link-->
+             <p style="text-align:center; margin-top:15px;">
+        <a href="https://www.instagram.com/youngmindsnkua?igsh=MXAwMTJzdGdhN3l6dg==" target="_blank">Κάντε μας follow στο Instagram για περισσότερα</a>
+    </p>
+
+            <!-- Result image -->
+             <img id="resultImg" src="" alt="Result Image" />
+             
+            <button id="restartBtn">Ξεκίνησε ξανά</button>
+        </div>
+    </div>
+
+    <!-- Scripts-->
+    <script src="script.js"></script>
+</body>
+</html>

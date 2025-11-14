@@ -1,0 +1,150 @@
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* prevents scrollbars */
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Canvas background === */
+#lavaCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind everything */
+}
+
+/* === App container === */
+#app {
+  position: relative;
+  z-index: 1; /* above the canvas */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: transparent;
+  color: #4A148C;
+  padding: 20px;
+}
+
+/* === Headings and Text === */
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* === Buttons === */
+
+button {
+  background: linear-gradient(135deg, #9c27b0, #ba68c8);
+  color: white;
+  border: none;
+  padding: 8px 16px;   /*vertical padding */
+  border-radius: 8px;  /*Curve..Smooth corners*/
+  font-size: 1.1em;    /*Text*/
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(156, 39, 176, 0.5);
+  min-width: 120px;
+  margin-top: 10px;
+  margin: 8px 4px;    /* Adds space between buttons*/
+  position: relative;
+  z-index: 2;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ba68c8, #9c27b0); /* reverse gradient on hover */
+  transform: translateY(-2px);   /* subtle lift */
+  box-shadow: 0 6px 16px rgba(156, 39, 176, 0.7); /* stronger glow on hover */
+}
+
+/* Optional subtle glow behind buttons */
+button::before {
+  content: "";
+  position: absolute;
+  top: -5px; left: -5px;
+  right: -5px; bottom: -5px;
+  border-radius: 10px;
+  background: rgba(156, 39, 176, 0.3);
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* === Result Image ===*/
+#resultImg {
+    display: block;
+    max-width: 200px;           /* adjust size */
+    margin: 20px auto 0 auto;   /* bottom-center positioning */
+    border-radius: 12px;        /* optional rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* === Link === */
+#result a {
+    color: #9c27b0;           
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#result a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== Mobile responsiveness ===== */
+@media (max-width: 600px) {
+  
+  h1 {
+    font-size: 1.5em;      /* smaller main title */
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1em;        /* smaller paragraph text */
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 6px 12px;     /* thinner buttons on small screens */
+    font-size: 0.9em;      /* smaller text */
+    min-width: 100px;      /* slightly narrower buttons */
+    margin: 6px 2px;
+  }
+
+  #app {
+    padding: 15px;          /* less padding on small screens */
+  }
+}
+
+/* For tiny phones */
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+  button {
+    padding: 5px 10px;
+    font-size: 0.85em;
+    min-width: 90px;
+    margin: 5px 2px;
+  }
+}
