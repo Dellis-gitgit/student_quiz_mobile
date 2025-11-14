@@ -84,10 +84,12 @@ function showResult() {
     resultDesc.innerText = resultDescriptions[most];
 
     //Change the image according to the result
-    if (most === 'a') resultImg.src = process.env.PUBLIC_URL + "/images/resultA.jpg";
-    else if (most === 'b') resultImg.src = process.env.PUBLIC_URL + "/images/resultB.jpg";
-    else if (most === 'c') resultImg.src = process.env.PUBLIC_URL + "/images/resultC.jpg";
-    else if (most === 'd') resultImg.src = process.env.PUBLIC_URL + "/images/resultD.jpg";
+    const BASE = "student_quiz_mobile/images/";
+
+    if (most === 'a') resultImg.src = BASE + "resultA.jpg";
+    else if (most === 'b') resultImg.src = BASE + "resultB.jpg";
+    else if (most === 'c') resultImg.src = BASE + "resultC.jpg";
+    else if (most === 'd') resultImg.src = BASE + "resultD.jpg";
 
     quizDiv.style.display = "none";
     resultDiv.style.display = "block";
