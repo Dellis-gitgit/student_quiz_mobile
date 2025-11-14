@@ -84,10 +84,10 @@ function showResult() {
     resultDesc.innerText = resultDescriptions[most];
 
     //Change the image according to the result
-    if(most === 'a') resultImg.src = "images/resultA.jpg";
-    else if(most === 'b') resultImg.src = "images/resultB.jpg";
-    else if(most === 'c') resultImg.src = "images/resultC.jpg";
-    else if(most === 'd') resultImg.src = "images/resultD.jpg";
+    if (most === 'a') resultImg.src = process.env.PUBLIC_URL + "/images/resultA.jpg";
+    else if (most === 'b') resultImg.src = process.env.PUBLIC_URL + "/images/resultB.jpg";
+    else if (most === 'c') resultImg.src = process.env.PUBLIC_URL + "/images/resultC.jpg";
+    else if (most === 'd') resultImg.src = process.env.PUBLIC_URL + "/images/resultD.jpg";
 
     quizDiv.style.display = "none";
     resultDiv.style.display = "block";
